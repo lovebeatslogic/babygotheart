@@ -24,12 +24,12 @@
     .container {
       padding: 30px;
       animation: fadeIn 1.5s ease-out;
-      width: 90%;  /* Make sure the container scales properly */
+      width: 100%;
       max-width: 100%;
     }
 
     h1 {
-      font-size: calc(10vw + 10px);  /* Combine vw and pixel size for dynamic shrinking */
+      font-size: 6rem;  /* Fixed font size */
       font-weight: 900;
       margin: 0;
       letter-spacing: 4px;
@@ -66,7 +66,7 @@
     /* Media Query for Mobile (below 600px) */
     @media (max-width: 600px) {
       h1 {
-        font-size: calc(12vw + 5px);  /* Make font slightly larger on mobile */
+        font-size: 5rem;  /* Slightly smaller font for mobile */
       }
 
       .container {
