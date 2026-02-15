@@ -17,25 +17,27 @@
       font-family: 'Montserrat', sans-serif;
       color: white;
       text-align: center;
-      height: 100vh;  /* Ensure full height for mobile */
+      height: 100vh;
       overflow: hidden;
     }
 
     .container {
       padding: 30px;
       animation: fadeIn 1.5s ease-out;
-      width: 90%;  /* Responsive container width */
+      width: 90%;  /* Make sure the container scales properly */
       max-width: 100%;
     }
 
     h1 {
-      font-size: clamp(3rem, 8vw, 6rem);  /* Scales the font based on screen size */
+      font-size: clamp(3rem, 8vw, 6rem); /* Scales the font based on screen size */
       font-weight: 900;
       margin: 0;
       letter-spacing: 4px;
       text-transform: uppercase;
       text-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
-      word-wrap: break-word;  /* Prevents overflow of long words */
+      word-wrap: normal;  /* Prevent word wrapping */
+      white-space: nowrap; /* Prevents text from breaking into multiple lines */
+      overflow: hidden;  /* Hides any overflow if the text doesn't fit */
     }
 
     .power-line {
@@ -64,12 +66,11 @@
     /* Media Query for Mobile (below 600px) */
     @media (max-width: 600px) {
       h1 {
-        font-size: 4rem;  /* Smaller font size for mobile screens */
-        margin: 10px;
+        font-size: 4rem; /* Smaller font size for mobile screens */
       }
 
       .container {
-        padding: 15px;  /* Less padding on mobile */
+        padding: 15px; /* Less padding on mobile */
       }
 
       .power-line, .coming {
@@ -91,5 +92,6 @@
   </div>
 </body>
 </html>
+
 
 
