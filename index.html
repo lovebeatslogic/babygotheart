@@ -29,7 +29,7 @@
     }
 
     h1 {
-      font-size: clamp(3rem, 8vw, 6rem); /* Scales the font based on screen size */
+      font-size: 10vw;  /* Font size based on the viewport width */
       font-weight: 900;
       margin: 0;
       letter-spacing: 4px;
@@ -66,7 +66,7 @@
     /* Media Query for Mobile (below 600px) */
     @media (max-width: 600px) {
       h1 {
-        font-size: 4rem; /* Smaller font size for mobile screens */
+        font-size: 12vw;  /* Slightly bigger for small screens but still scales */
       }
 
       .container {
