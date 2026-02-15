@@ -10,36 +10,30 @@
   <style>
     body {
       margin: 0;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: radial-gradient(circle at top, #ff7f32, #f05424 55%, #b03a2e 100%);
+      /* Updated gradient with warm orange tones */
+      background: radial-gradient(circle at top, #ff6600, #ff7f32 55%, #d65c3c 100%);
       font-family: 'Montserrat', sans-serif;
       color: white;
       text-align: center;
-      height: 100vh;
       overflow: hidden;
     }
 
     .container {
       padding: 30px;
       animation: fadeIn 1.5s ease-out;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      flex-direction: column;
     }
 
     h1 {
-      font-size: 10vw;  /* Scaling font size based on the viewport width */
+      font-size: clamp(3rem, 8vw, 6rem);
       font-weight: 900;
       margin: 0;
       letter-spacing: 4px;
       text-transform: uppercase;
       text-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
-      overflow: hidden;
-      max-width: 100%;  /* Ensures the text fits within the container */
     }
 
     .power-line {
@@ -64,21 +58,6 @@
       from { opacity: 0; transform: translateY(25px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
-    /* Media Query for Mobile (below 600px) */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 15vw;  /* Make the font a bit larger for mobile */
-      }
-
-      .container {
-        padding: 15px;  /* Less padding on mobile */
-      }
-
-      .power-line, .coming {
-        font-size: 1rem;  /* Adjust font size for readability */
-      }
-    }
   </style>
 </head>
 
@@ -86,7 +65,7 @@
   <div class="container">
     <h1>baby got heart</h1>
     <div class="power-line">
-      "The flower that blooms in adversity is the rarest and most beautiful of all." (Mulan, 1998)
+      "The flower that blooms in adversity is the rarest and most beautiful of all" (Mulan, 1998)
     </div>
     <div class="coming">
       Coming soon
