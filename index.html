@@ -24,20 +24,23 @@
     .container {
       padding: 30px;
       animation: fadeIn 1.5s ease-out;
-      width: 100%;
-      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
     }
 
     h1 {
-      font-size: 6rem;  /* Fixed font size */
+      font-size: 10vw;  /* Scaling font size based on the viewport width */
       font-weight: 900;
       margin: 0;
       letter-spacing: 4px;
       text-transform: uppercase;
       text-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
-      word-wrap: normal;  /* Prevent word wrapping */
-      white-space: nowrap; /* Prevents text from breaking into multiple lines */
-      overflow: hidden;  /* Hides any overflow if the text doesn't fit */
+      white-space: nowrap; /* Prevents the text from breaking into multiple lines */
+      overflow: hidden;
+      max-width: 100%;  /* Ensures the text fits within the container */
     }
 
     .power-line {
@@ -66,11 +69,11 @@
     /* Media Query for Mobile (below 600px) */
     @media (max-width: 600px) {
       h1 {
-        font-size: 5rem;  /* Slightly smaller font for mobile */
+        font-size: 15vw;  /* Make the font a bit larger for mobile */
       }
 
       .container {
-        padding: 15px; /* Less padding on mobile */
+        padding: 15px;  /* Less padding on mobile */
       }
 
       .power-line, .coming {
@@ -92,4 +95,3 @@
   </div>
 </body>
 </html>
-
