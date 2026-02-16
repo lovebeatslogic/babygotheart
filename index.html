@@ -5,7 +5,7 @@
   <title>babygotheart</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="stylesheet">
 
   <style>
     body {
@@ -14,7 +14,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      /* Updated gradient with warm orange tones */
+      /* Warm orange gradient */
       background: radial-gradient(circle at top, #ff6600, #ff7f32 55%, #d65c3c 100%);
       font-family: 'Montserrat', sans-serif;
       color: white;
@@ -23,31 +23,44 @@
     }
 
     .container {
-      padding: 30px;
+      /* Padding keeps text from hitting the screen edges */
+      padding: 20px; 
+      width: 100%;
+      box-sizing: border-box;
       animation: fadeIn 1.5s ease-out;
     }
 
     h1 {
-      font-size: clamp(3rem, 8vw, 6rem);
+      /* Fluid font size: Min 1.8rem, Preferred 7vw, Max 6rem */
+      font-size: clamp(1.8rem, 7vw, 6rem);
       font-weight: 900;
       margin: 0;
+      /* Letter spacing contributes to width; kept at 4px for style */
       letter-spacing: 4px;
       text-transform: uppercase;
       text-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+      
+      /* CRITICAL: Prevents text from ever wrapping to a second line */
+      white-space: nowrap;
+      
+      /* Optional: Ensures if screen is microscopically small, it doesn't break layout */
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .power-line {
       margin-top: 25px;
-      font-size: 1.3rem;
-      max-width: 700px;
+      font-size: 1.1rem; /* Slightly smaller for better mobile fit */
+      max-width: 600px;
       margin-left: auto;
       margin-right: auto;
       opacity: 0.95;
+      line-height: 1.4;
     }
 
     .coming {
       margin-top: 40px;
-      font-size: 1.1rem;
+      font-size: 1rem;
       letter-spacing: 2px;
       text-transform: uppercase;
       opacity: 0.85;
@@ -58,14 +71,22 @@
       from { opacity: 0; transform: translateY(25px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    /* Extra safety for very small phones */
+    @media (max-width: 360px) {
+      h1 {
+        letter-spacing: 2px;
+        font-size: 1.5rem;
+      }
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <h1>baby got heart</h1>
+    <h1>babygotheart</h1>
     <div class="power-line">
-      "The flower that blooms in adversity is the rarest and most beautiful of all." (Mulan, 1998)
+      "The flower that blooms in adversity is the rarest and most beautiful of all." <br>(Mulan, 1998)
     </div>
     <div class="coming">
       Coming soon
